@@ -1,8 +1,7 @@
 
 var MinStack = function() {
 this.array=[];
- this.minStack =[];
-
+this.minStack =[];
 };
 
 /** 
@@ -11,13 +10,14 @@ this.array=[];
  */
 MinStack.prototype.push = function(val) {
     this.array.push(val);
-    if(this.minStack==0){
+    if(this.minStack.length==0){
        this.minStack.push(val);
     }
     else{
          this.minStack.push(Math.min(val,this.minStack[this.minStack.length-1]));
     }
-    
+      
+  
 };
 
 /**
